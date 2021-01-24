@@ -1,0 +1,74 @@
+syntax = "proto3";
+package core.item;
+option go_package = ".;pb";
+option java_package = "cloud.nextsol.core.item";
+option java_generic_services = true;
+
+// test comment 1
+
+message Body {
+  string name = 1;
+  float nerons = 2;
+  double bodyCells = 3;
+  int32 hands = 4;
+  int64 legs = 5;
+  bool healthy = 6;
+  Age age = 7;
+  repeated MoodStatus moods = 8;
+  Brain brain = 9;
+  map<string,string> map = 10;
+}
+
+enum Age { // test comment 2
+  YOUNG = 0;
+  OLD = 1;
+}
+
+
+enum MoodStatus {
+  SAD = 0;
+  HAPPY = 1;
+  BORED = 2; // test comment 3
+}
+
+message Brain {
+  uint64 brainCells = 1;
+  BrainIq brainIq = 2;
+  repeated Memory memories = 3;
+
+  enum BrainIq {
+    SMART = 0;
+    STUPID = 1;
+  }
+}
+
+message Memory {
+  string time = 1;
+  MemoryDetail memoryDetail = 2;
+  repeated Human peopleInvolved = 3;
+}
+
+message MemoryDetail {
+  string description = 1;
+  Type type = 2;
+
+  enum Type {
+    GOOD = 0;
+    BAD = 1;
+  }
+}
+
+message Human {
+  string name = 1;
+  RelationShip relationShip = 2;
+
+  enum RelationShip {
+    CLOSE = 0;
+    KNOWN = 1;
+    UNKNOWN = 2;
+  }
+}
+
+service BodyService {
+  rpc createBody(Body) returns (Body);
+}

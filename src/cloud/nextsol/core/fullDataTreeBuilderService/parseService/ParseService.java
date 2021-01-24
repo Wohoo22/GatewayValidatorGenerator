@@ -1,6 +1,5 @@
-package cloud.nextsol.core.service.parseService;
+package cloud.nextsol.core.fullDataTreeBuilderService.parseService;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 public class ParseService {

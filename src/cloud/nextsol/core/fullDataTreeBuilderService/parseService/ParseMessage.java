@@ -1,4 +1,4 @@
-package cloud.nextsol.core.service.parseService;
+package cloud.nextsol.core.fullDataTreeBuilderService.parseService;
 
 import cloud.nextsol.core.enums.DataType;
 import cloud.nextsol.core.model.DataNode;

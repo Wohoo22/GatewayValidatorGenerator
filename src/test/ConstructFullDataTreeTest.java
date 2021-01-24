@@ -2,7 +2,7 @@ package test;
 
 import cloud.nextsol.core.enums.DataType;
 import cloud.nextsol.core.model.DataNode;
-import cloud.nextsol.core.service.ConstructFullDataTree;
+import cloud.nextsol.core.fullDataTreeBuilderService.ConstructFullDataTree;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

@@ -1,13 +1,15 @@
-package cloud.nextsol.core.service;
+package cloud.nextsol.core.fullDataTreeBuilderService;
 
+import cloud.nextsol.core.fullDataTreeBuilderService.dataTreeService.BuildDataTree;
+import cloud.nextsol.core.fullDataTreeBuilderService.dataTreeService.ConstructMessageList;
+import cloud.nextsol.core.fullDataTreeBuilderService.dataTreeService.InitializeDataTree;
 import cloud.nextsol.core.model.DataNode;
-import cloud.nextsol.core.service.dataTreeService.BuildDataTree;
-import cloud.nextsol.core.service.dataTreeService.ConstructMessageList;
-import cloud.nextsol.core.service.dataTreeService.InitializeDataTree;
+import cloud.nextsol.core.utils.StringProcessingUtils;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
+
 
 public class ConstructFullDataTree {
     /*
@@ -15,8 +17,9 @@ public class ConstructFullDataTree {
      * */
     public static LinkedHashMap<String, List<DataNode>> buildFullDataTree(String fileData) {
 
-        // replace all '/n' and '/r'
-        fileData = fileData.replace("\n", " ").replace("\r", " ");
+        // replace all '/n' and '/r' and comments
+        fileData = StringProcessingUtils.removeComments(fileData);
+        fileData = fileData.replace('\n', ' ').replace('\r', ' ');
 
         /*
         initialize data for building full data tree later
