@@ -1,9 +1,9 @@
 package cloud.nextsol.core.fullDataTreeBuilderService.dataTreeService;
 
-import cloud.nextsol.core.model.DataNode;
 import cloud.nextsol.core.fullDataTreeBuilderService.parser.ParseEnum;
 import cloud.nextsol.core.fullDataTreeBuilderService.parser.ParseMessage;
 import cloud.nextsol.core.fullDataTreeBuilderService.parser.ParseService;
+import cloud.nextsol.core.model.DataNode;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -12,6 +12,7 @@ import java.util.List;
 public class InitializeDataTree {
     public static void initialize(LinkedHashMap<String, String> serviceMessageMapper, HashMap<String, List<DataNode>> initMessageList,
                                   HashMap<String, List<String>> initEnumList, String fileData) {
+
 
         for (int fileDataIndex = 0; fileDataIndex < fileData.length(); fileDataIndex++) {
 

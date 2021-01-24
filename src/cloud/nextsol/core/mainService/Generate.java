@@ -18,10 +18,14 @@ public class Generate {
 
         LinkedHashMap<String, List<DataNode>> dataTree = ConstructFullDataTree.buildFullDataTree(grpcFileData);
 
+        System.out.println("Start generating validator ...");
         String result = GenerateValidatorInString.generate(dataTree);
+        System.out.println("Generated validator !");
 
         FileWriter outputFile = new FileWriter(outputFileDir);
         outputFile.write(result);
         outputFile.close();
+
+        System.out.println("SUCCESS !!!");
     }
 }

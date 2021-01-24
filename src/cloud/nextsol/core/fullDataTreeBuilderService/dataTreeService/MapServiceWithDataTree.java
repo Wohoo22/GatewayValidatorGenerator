@@ -7,9 +7,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BuildDataTree {
-    public static void build(HashMap<String, List<DataNode>> initMessageList, LinkedHashMap<String, String> serviceMessageMapper,
-                      LinkedHashMap<String, List<DataNode>> dataTree) {
+public class MapServiceWithDataTree {
+    public static void map(HashMap<String, List<DataNode>> initMessageList, LinkedHashMap<String, String> serviceMessageMapper,
+                           LinkedHashMap<String, List<DataNode>> dataTree) {
 
         for (Map.Entry<String, String> serviceAndMessage : serviceMessageMapper.entrySet()) {
             // key == service_name
