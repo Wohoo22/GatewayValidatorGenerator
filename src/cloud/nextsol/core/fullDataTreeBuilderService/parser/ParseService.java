@@ -1,4 +1,4 @@
-package cloud.nextsol.core.fullDataTreeBuilderService.parseService;
+package cloud.nextsol.core.fullDataTreeBuilderService.parser;
 
 import java.util.LinkedHashMap;
 

@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ConstructFullDataTreeTest {
     public static void main(String[] args) throws IOException {
-        String grpcFilePath = "C:\\Users\\ADMIN\\Desktop\\test.proto";
+        String grpcFilePath = "C:\\Users\\ADMIN\\Desktop\\sample_test_input.proto";
         String grpcFileData = Files.readString(Path.of(grpcFilePath), StandardCharsets.UTF_8);
 
         LinkedHashMap<String, List<DataNode>> dataTree = ConstructFullDataTree.buildFullDataTree(grpcFileData);
@@ -41,7 +41,7 @@ public class ConstructFullDataTreeTest {
         assert childDataNodes.get(0).getName().equals("name");
 
         assert childDataNodes.get(1).getDataType() == DataType.FLOAT;
-        assert childDataNodes.get(1).getName().equals("nerons");
+        assert childDataNodes.get(1).getName().equals("neurons");
 
         assert childDataNodes.get(2).getDataType() == DataType.DOUBLE;
         assert childDataNodes.get(2).getName().equals("bodyCells");

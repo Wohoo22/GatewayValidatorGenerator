@@ -1,0 +1,94 @@
+import { validatorConfig } from '../core/interfaces/validator_config';
+import { coreValidator } from '../libs/coreValidator';
+
+
+const helloValidator: validatorConfig = {
+  service: 'helloService',
+  functions: [
+    {
+      name: 'createBody',
+      schema: {
+        name: {
+          type: 'string',
+        },
+        neurons: {
+          type: 'number',
+        },
+        bodyCells: {
+          type: 'number',
+        },
+        hands: {
+          type: 'number',
+        },
+        legs: {
+          type: 'number',
+        },
+        healthy: {
+          type: 'boolean',
+        },
+        age: {
+          type: 'string',
+          enum: ['YOUNG','OLD'],
+        },
+        moods: {
+          type: 'array',
+          items: {
+            type: 'string',
+            enum: ['SAD','HAPPY','BORED'],
+          },
+        },
+        brain: {
+          type: 'object',
+          props: {
+            brainCells: {
+              type: 'number',
+            },
+            brainIq: {
+              type: 'string',
+              enum: ['SMART','STUPID'],
+            },
+            memories: {
+              type: 'array',
+              items: {
+                type: 'object',
+                props: {
+                  time: {
+                    type: 'string',
+                  },
+                  memoryDetail: {
+                    type: 'object',
+                    props: {
+                      description: {
+                        type: 'string',
+                      },
+                      type: {
+                        type: 'string',
+                        enum: ['GOOD','BAD'],
+                      },
+                    },
+                  },
+                  peopleInvolved: {
+                    type: 'array',
+                    items: {
+                      type: 'object',
+                      props: {
+                        name: {
+                          type: 'string',
+                        },
+                        relationShip: {
+                          type: 'string',
+                          enum: ['CLOSE','KNOWN','UNKNOWN'],
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  ],
+};
+export default helloValidator;

@@ -1,9 +1,9 @@
 package cloud.nextsol.core.fullDataTreeBuilderService.dataTreeService;
 
 import cloud.nextsol.core.model.DataNode;
-import cloud.nextsol.core.fullDataTreeBuilderService.parseService.ParseEnum;
-import cloud.nextsol.core.fullDataTreeBuilderService.parseService.ParseMessage;
-import cloud.nextsol.core.fullDataTreeBuilderService.parseService.ParseService;
+import cloud.nextsol.core.fullDataTreeBuilderService.parser.ParseEnum;
+import cloud.nextsol.core.fullDataTreeBuilderService.parser.ParseMessage;
+import cloud.nextsol.core.fullDataTreeBuilderService.parser.ParseService;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

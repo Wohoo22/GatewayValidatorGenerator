@@ -8,7 +8,7 @@ option java_generic_services = true;
 
 message Body {
   string name = 1;
-  float nerons = 2;
+  float neurons = 2;
   double bodyCells = 3;
   int32 hands = 4;
   int64 legs = 5;

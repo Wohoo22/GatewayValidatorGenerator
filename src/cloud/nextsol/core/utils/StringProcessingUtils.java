@@ -22,4 +22,10 @@ public class StringProcessingUtils {
 
         return res;
     }
+
+    public static String addLineBreak(String s, int lineNumber) {
+        for(int i=0; i<lineNumber; i++)
+            s = s.concat("\n");
+        return s;
+    }
 }
