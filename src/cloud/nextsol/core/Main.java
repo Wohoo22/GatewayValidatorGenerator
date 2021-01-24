@@ -8,7 +8,7 @@ public class Main {
 
     private static final String protoFile = "D:\\Work\\work-space\\nexttech\\core-grpc-proto\\co-item\\item.proto";
 
-    private static final String outputFile = "C:\\Users\\ADMIN\\Desktop\\item_validator.txt";
+    private static final String outputFile = "C:\\Users\\ADMIN\\Desktop\\item.txt";
 
     public static void main(String[] args) throws IOException {
         Generate.generate(protoFile, outputFile);

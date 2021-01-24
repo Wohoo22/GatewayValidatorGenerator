@@ -32,7 +32,7 @@ public class StringToDataTypeConverter {
     }
 
     private static boolean isMap(String s) {
-        return s.length() >= 5 && s.startsWith("map") && s.charAt(3) == '<' && s.endsWith(">");
+        return s.length() >= 5 && s.startsWith("map<");
     }
 }
 
