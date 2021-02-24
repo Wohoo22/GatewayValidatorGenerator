@@ -13,6 +13,7 @@ public class ConstructMessageList {
         for (Map.Entry<String, List<DataNode>> messageData : initMessageList.entrySet()) {
             buildMessageRecursively(messageData.getValue(), initMessageList, initEnumList, messageData.getKey());
         }
+        int z = 0;
     }
 
     private static void buildMessageRecursively(List<DataNode> dataNodes, HashMap<String, List<DataNode>> initMessageList,

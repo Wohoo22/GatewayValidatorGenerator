@@ -58,6 +58,9 @@ public class GenerateValidatorInString {
     }
 
     private static String generateSchemaDetailRecursiveLy(List<DataNode> dataNodes, int whiteSpaceCount, String result) {
+
+        if (dataNodes == null) return result;
+
         for (DataNode dataNode : dataNodes) {
 
             // meta data type doesn't need to be validated
