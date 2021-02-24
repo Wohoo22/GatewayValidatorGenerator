@@ -5,6 +5,7 @@ import cloud.nextsol.core.enums.DataType;
 public class StringToDataTypeConverter {
     public static DataType convert(String s) {
         if (isMap(s)) return DataType.META;
+        if (isFieldMask(s)) return DataType.META;
 
         switch (s) {
             case "string":
@@ -33,6 +34,10 @@ public class StringToDataTypeConverter {
 
     private static boolean isMap(String s) {
         return s.length() >= 4 && s.startsWith("map<");
+    }
+
+    private static boolean isFieldMask(String s) {
+        return s.equals("google.protobuf.FieldMask");
     }
 }
 
