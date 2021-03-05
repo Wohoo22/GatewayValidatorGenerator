@@ -13,8 +13,9 @@ public class DataTypeToValidatorType {
             case LONG:
                 return "number";
             case STRING:
-            case ENUM:
                 return "string";
+            case ENUM:
+                return "enum";
             case BOOLEAN:
                 return "boolean";
             case ARRAY:
